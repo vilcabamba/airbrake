@@ -21,9 +21,9 @@ module Airbrake
       end
 
       app.config.middleware.insert_after middleware,
-        "Airbrake::Rails::Middleware"
+        Airbrake::Rails::Middleware
 
-      app.config.middleware.insert 0, "Airbrake::UserInformer"
+      app.config.middleware.insert 0, Airbrake::UserInformer
     end
 
     config.after_initialize do
