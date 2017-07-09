@@ -14,7 +14,7 @@ module Airbrake
 
       middleware = if defined?(ActionDispatch::DebugExceptions)
         # Rails >= 3.2.0
-        "ActionDispatch::DebugExceptions"
+        ActionDispatch::DebugExceptions
       else
         # Rails < 3.2.0
         "ActionDispatch::ShowExceptions"
